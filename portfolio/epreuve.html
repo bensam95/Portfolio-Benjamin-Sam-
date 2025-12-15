@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Épreuve Portfolio - BTS SIO SLAM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">BTS SIO SLAM</a>
+      <nav class="nav">
+        <a href="projects.html">Projets</a>
+        <a href="experience.html">Stages / Expérience</a>
+        <a href="veille.html">Veille technologique</a>
+        <a href="epreuve.html">Épreuve Portfolio</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:96px">
+    <h2 class="section-title">Épreuve du Portfolio</h2>
+    <p>Cette page présente l'épreuve du portfolio. Insérez ci-dessous le tableau PDF demandé par l'examinateur.</p>
+
+    <h3>Consignes</h3>
+    <ul>
+      <li>Ajoutez votre tableau d'évaluation / feuille de notes au format PDF.</li>
+      <li>Le PDF doit contenir le tableau demandé par votre établissement.</li>
+    </ul>
+
+    <h3>Emplacement pour le tableau (PDF)</h3>
+    <p class="muted">Remplacez le fichier `assets/tableau.pdf` par votre PDF ou modifiez l'attribut `src` de la balise &lt;embed&gt; ci-dessous.</p>
+
+    <div class="pdf-placeholder">
+      <!-- Affiche le tableau de synthèse en PDF placé par l'utilisateur dans assets/tableau.pdf -->
+      <embed id="tableauEmbed" src="assets/Tableau de synthèse.pdf" type="application/pdf" width="100%" height="520px">
+      <p class="muted" style="margin-top:0.6rem">Si le PDF ne s'affiche pas dans votre navigateur, utilisez le bouton ci-dessous pour télécharger le fichier :</p>
+      <a class="btn" href="assets/Tableau de synthèse.pdf" target="_blank" rel="noopener noreferrer">Télécharger le tableau (PDF)</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2025 - Portfolio BTS SIO SLAM</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

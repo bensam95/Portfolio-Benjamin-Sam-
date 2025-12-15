@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projets - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">BTS SIO SLAM</a>
+      <nav class="nav">
+        <a href="projects.html">Projets</a>
+        <a href="experience.html">Stages / Expérience</a>
+        <a href="veille.html">Veille technologique</a>
+        <a href="epreuve.html">Épreuve Portfolio</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:96px">
+    <h2 class="section-title">Projets</h2>
+    <p>Voici quelques projets réalisés durant le BTS SIO SLAM et en dehors. Chaque carte contient un court descriptif et un extrait de code que vous pouvez afficher.</p>
+
+    <section class="projects-grid">
+      <article class="card">
+        <h4>Gestionnaire de tâches (PHP / MySQL)</h4>
+        <p>Application web pour gérer des tâches avec connexion, listes et priorités.</p>
+        <div class="project-actions">
+          <a class="btn" href="#" onclick="return false">Démonstration</a>
+          <button class="btn ghost" data-toggle="code-1">Voir le code</button>
+        </div>
+        <div id="code-1" class="code-block"><pre><code>&lt;?php
+// connexion simple PDO
+$pdo = new PDO('mysql:host=localhost;dbname=todo','user','pass');
+$stmt = $pdo->prepare('SELECT * FROM tasks WHERE user_id = ?');
+$stmt->execute([$_SESSION['user_id']]);
+$tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?&gt;</code></pre></div>
+      </article>
+
+      <article class="card">
+        <h4>Site vitrine dynamique (JS / Node)</h4>
+        <p>Site statique amélioré avec génération côté serveur et API pour commentaires.</p>
+        <div class="project-actions">
+          <a class="btn" href="#" onclick="return false">Démonstration</a>
+          <button class="btn ghost" data-toggle="code-2">Voir le code</button>
+        </div>
+        <div id="code-2" class="code-block"><pre><code>// Express route simple
+app.get('/api/comments', async (req, res) =&gt; {
+  const comments = await db.query('SELECT * FROM comments ORDER BY created_at DESC');
+  res.json(comments.rows);
+});</code></pre></div>
+      </article>
+
+      <article class="card">
+        <h4>Mini-jeu HTML5</h4>
+        <p>Petit jeu développé en JavaScript pour apprendre Canvas et animations.</p>
+        <div class="project-actions">
+          <a class="btn" href="#" onclick="return false">Démonstration</a>
+          <button class="btn ghost" data-toggle="code-3">Voir le code</button>
+        </div>
+        <div id="code-3" class="code-block"><pre><code>// Extrait d'animation
+function loop(){
+  update();
+  draw();
+  requestAnimationFrame(loop);
+}
+loop();</code></pre></div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2025 - Portfolio BTS SIO SLAM</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* Background for Veille page using assets/sd.jpg */
+html, body { height: 100%; margin: 0; }
+
+.bg-sd {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/sd.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+/* Slight dark overlay for readability */
+.bg-sd::before{
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,18,0.45);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure page content sits above overlay */
+.bg-sd > * { position: relative; z-index: 1; }
