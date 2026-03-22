@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio - BTS SIO SLAM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hero-bg.css">
+  <link rel="stylesheet" href="css/pages-bg.css">
+  <link rel="stylesheet" href="css/veille-bg.css">
+  <link rel="stylesheet" href="css/contact-bg.css">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; width: 100%; background-image: url('assets/bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+
+    /* Background image applied to the whole page */
+    /* Hero is now transparent (content sits above the body background) */
+    .hero { position: relative; min-height: 100vh; width: 100%; margin: 0; padding: 0; display: flex; align-items: center; justify-content: center; }
+
+    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,8,20,0.6) 0%, rgba(3,8,20,0.65) 50%, rgba(3,8,20,0.7) 100%); pointer-events: none; z-index: 0; }
+    .hero .hero-grid, .hero .hero-text, .hero .hero-card { position: relative; z-index: 1; }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #7fe3ff, #aeefff);
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    .badge:hover {
+      background: rgba(127,227,255,0.3) !important;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#top">BTS SIO SLAM</a>
+      <nav class="nav">
+        <a href="#projects">Projets</a>
+        <a href="#experience">Stages / Expérience</a>
+        <a href="#veille">Veille technologique</a>
+        <a href="#epreuve">Épreuve Portfolio</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button id="navToggle" class="nav-toggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Portfolio BTS SIO SLAM</h1>
+          <p>Bienvenue sur mon Portfolio !</p></br>
+          <p>Je m'appelle <strong>Benjamin SAM</strong>. Je conçois et développe des applications (web et logiciels) : conception, bases de données, back-end, et interfaces.</p>
+          <p class="muted">Explore mes projets, expériences et ma démarche de veille.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn">Voir mes projets</a>
+            <a href="#epreuve" class="btn ghost">Épreuve portfolio</a>
+          </div>
+          <!-- Mini CV card placed under the primary CTAs -->
+          <div class="hero-cv" style="margin-top:1rem;">
+            <div class="card" style="background:rgba(255,255,255,0.03);padding:0.8rem;border-radius:10px;display:flex;gap:0.6rem;align-items:center">
+              <div style="flex:1">
+                <strong>Mon CV</strong>
+                <p class="muted" style="margin:0.25rem 0 0;font-size:0.95rem">Téléchargez ou visualisez rapidement mon CV.</p>
+              </div>
+              <div style="display:flex;gap:0.5rem">
+                <a class="btn" href="assets/CV-Benjamin Sam .pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
+                <button class="btn ghost" data-toggle="cv-embed-hero">Aperçu</button>
+              </div>
+            </div>
+            <div id="cv-embed-hero" class="pdf-placeholder" style="display:none;margin-top:0.6rem">
+              <embed src="assets/CV-Benjamin Sam .pdf" type="application/pdf" width="100%" height="320px">
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="neon-card">
+            <h3>Compétences</h3>
+            <ul>
+              <li>PHP / MySQL</li>
+              <li>Java / C</li>
+              <li>HTML / CSS (responsive)</li>
+              <li>Git, Méthodes agiles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV moved to hero area (mini preview). Original section removed to avoid duplication sir. -->
+
+    <!-- Parcours / Diplômes -->
+    <section id="parcours" class="container" style="padding-top:2rem;padding-bottom:2rem">
+      <h2 class="section-title">Parcours et Diplômes</h2>
+
+      <section class="projects-grid">
+        <article class="card">
+          <h4>BTS SIO - Option SLAM</h4>
+          <p class="muted">Groupe Scolaire La Madone / Paris 18ème — 2024-2026</p>
+          <ul class="muted" style="margin:0.4rem 0 0 1rem;display:grid;gap:0.3rem">
+            <li>Développement applicatif, bases de données, cybersécurité.</li><br>
+            <li>Projets web et mobile, gestion de version.</li><br>
+            <li> Langages: C, PHP, HTML, CSS, Python, Bases JAVA, SGBD, MySQL</li> <br>
+            <li>Systèmes d’exploitation : Windows Client/serveur. Domaine AD, DHCP, DNS</li> <br>
+            <li>Réseaux : TCP-IP, DHCP, HTTP, Modèle OSI ; </li><br>
+            <li>Cybersécurité : RGPD, CNIL, 12 règles de sécurité pour PME</li> <br>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h4>Baccalauréat</h4>
+          <p class="muted">Spécialité SES (Sciences Économiques et Sociales) et NSI (Numériques Sciences Informatiques)— Année 2021 - 2024</p>
+          <ul class="muted" style="margin:0.4rem 0 0 1rem;display:grid;gap:0.3rem">
+            <li> Programmation en language Python </li> <br>
+            <li>Système exploitation </li> <br>
+ 
+            <li>Création de page Web </li> <br>
+ 
+            <li>Etude de base de données et d’infrastructure réseau </li> <br>
+ 
+            <li>Création d’un Puissance 4 en Python </li>  <br>
+          </ul>
+        </article>
+      </section>
+    </section>
+
+    <section class="intro" style="padding-top:2rem;padding-bottom:2rem">
+      <div class="container">
+      <h2>À propos</h2>
+      <div class="bts-sio-presentation" style="background:rgba(10,20,40,0.65);border-radius:14px;padding:2rem 1.5rem 1.5rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
+        <h3 style="color:#7fe3ff;font-family:Orbitron,sans-serif;margin-top:0;">Qu'est-ce que le BTS SIO&nbsp;? </h3>
+        <p>Avant de parler de mon parcours, laissez-moi vous présenter la filière qui me passionne&nbsp;:</p>
+        <p><strong>Le Brevet de Technicien Supérieur Services Informatiques aux Organisations (BTS SIO)</strong> s'adresse à celles et ceux qui souhaitent se former en deux ans aux métiers de l'<strong>administration réseau</strong> ou du <strong>développement</strong>. Ce diplôme permet d'intégrer rapidement le marché du travail ou de poursuivre des études dans l'informatique.</p>
+        <h4 style="color:#aeefff;margin-bottom:0.5rem;">Deux spécialités au choix&nbsp;:</h4>
+        <div class="bts-options" style="display:flex;flex-wrap:wrap;gap:2rem;">
+          <div style="flex:1 1 260px;min-width:220px;">
+            <h5 style="color:#b6f0ff;margin:0.5rem 0 0.2rem;">Option SISR <span style="font-size:1.2em;">🖧</span></h5>
+            <p style="margin:0 0 0.5rem;">La <strong>Solution d'Infrastructure, Systèmes et Réseaux</strong> forme des professionnels capables d'installer, maintenir et sécuriser les réseaux et équipements informatiques d'une entreprise.</p>
+            <ul style="margin:0 0 0.5rem 1.2rem;">
+              <li>Administrateur systèmes et réseaux</li><br>
+              <li>Informaticien support et déploiement</li><br>
+              <li>Pilote d’exploitation</li><br>
+              <li>Support systèmes et réseaux</li><br>
+              <li>Technicien d’infrastructure</li><br>
+              <li>Technicien de production</li><br>
+              <li>Technicien micro et réseaux</li>
+            </ul>
+          </div>
+          <div style="flex:1 1 260px;min-width:220px;">
+            <h5 style="color:#b6f0ff;margin:0.5rem 0 0.2rem;">Option SLAM <span style="font-size:1.2em;">👨‍💻</span> <span style="font-size:0.9em;color:#7fe3ff;">(ma spécialité)</span></h5>
+            <p style="margin:0 0 0.5rem;">La <strong>Solution Logicielle et Applications Métiers</strong> forme des spécialistes du développement&nbsp;: analyse des besoins, rédaction de cahier des charges, développement, intégration et déploiement d'applications.</p>
+            <ul style="margin:0 0 0.5rem 1.2rem;">
+              <li>Développeur d’applications informatiques</li><br>
+              <li>Développeur informatique</li><br>
+              <li>Analyste d’applications ou d’études</li><br>
+              <li>Analyste programmeur</li><br>
+              <li>Programmeur analyste</li><br>
+              <li>Programmeur d’applications</li><br>
+              <li>Responsable des services applicatifs</li><br>
+              <li>Technicien d’études informatiques</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p>Je prépare un BTS SIO option SLAM. Ce portfolio présente mes projets scolaires et personnels, mes expériences en stage, et ma démarche de veille technologique.</p>
+    </section>
+
+    <!-- Projets (fusion depuis projects.html) -->
+    <section id="projects" class="container" style="padding-top:1rem">
+      <h2 class="section-title">Projets</h2>
+      <p>Voici quelques projets réalisés durant le BTS SIO SLAM et en dehors. Chaque carte contient un court descriptif et un extrait de code que vous pouvez afficher.</p>
+
+      <!-- Tech Stack Carousel -->
+      <div style="margin:2rem 0;overflow:hidden">
+        <h3 style="color:#aeefff;text-align:center;margin-bottom:1rem">Technologies utilisées</h3>
+        <div style="display:flex;gap:2rem;animation:scroll 25s linear infinite;white-space:nowrap;padding:1rem 0">
+          <!-- HTML -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">HTML</span>
+          </div>
+          <!-- CSS -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">CSS</span>
+          </div>
+          <!-- Java -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">Java</span>
+          </div>
+          <!-- PHP -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">PHP</span>
+          </div>
+          <!-- Laravel -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg" alt="Laravel" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">Laravel</span>
+          </div>
+          <!-- SQL -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="SQL" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">SQL</span>
+          </div>
+          <!-- Python -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">Python</span>
+          </div>
+          <!-- Repeat for seamless loop -->
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">HTML</span>
+          </div>
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">CSS</span>
+          </div>
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">Java</span>
+          </div>
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">PHP</span>
+          </div>
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg" alt="Laravel" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">Laravel</span>
+          </div>
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="SQL" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">SQL</span>
+          </div>
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:0.5rem">
+            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" style="width:60px;height:60px;object-fit:contain">
+            <span style="font-size:0.85rem;color:#d8f3ff">Python</span>
+          </div>
+        </div>
+        <style>
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        </style>
+      </div>
+
+      <h3 style="color:#7fe3ff;margin-top:2rem">Projets Scolaires</h3>
+      <p>Projets réalisés dans le cadre de mes études en BTS SIO SLAM.</p>
+
+      <section class="projects-grid">
+        <article class="card">
+          <h4>Site de Location de Vehicule (PHP / MySQL / HTML / CSS)</h4>
+          <p>Site web pour louer des Vehicules avec connexion, inscriptions et cybersécurité renforcée.</p>
+          <div style="margin-top:1rem;display:flex;flex-direction:column;gap:1rem">
+            <img src="assets/v.png" alt="Visuel 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vi.png" alt="Visuel 2" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vc.png" alt="Visuel 3" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vt.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vr.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vmr.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vdmr.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/bd.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+          </div>
+        </article>
+
+        <article class="card">
+          <h4>Base de données pour une location d'embarcation</h4>
+          <p>developpement d'une base de données pour la gestion d'une location d'embarcation.</p>
+          <div style="margin-top:1rem;display:flex;flex-direction:column;gap:1rem">
+            <img src="assets/m.png" alt="Projet 2 visuel 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/m1.png" alt="Projet 2 visuel 2" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/m2.png" alt="Projet 2 visuel 3" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+          </div>
+        </article>
+
+        <article class="card">
+          <h4>Gestion du Personnel des Ligues</h4>
+          <p>Application Java développée avec Eclipse pour gérer les employés de différentes ligues hébergées par la Maison des Ligues (M2L).</p>
+          <div style="margin-top:1rem;display:flex;flex-direction:column;gap:1rem">
+            <img src="assets/g.png" alt="Gestion du Personnel visuel 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/g1.png" alt="Gestion du Personnel visuel 2" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/g2.png" alt="Gestion du Personnel visuel 3" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+          </div>
+        </article>
+
+        <article class="card">
+            <h4>Site de réservation Parking</h4>
+            <p>Création d'une base de données simple pour gérer des équipements réseau.</p>
+            <ul class="muted" style="margin:0 0 0.8rem 1.2rem;display:grid;gap:0.3rem"><br>
+              <li>Conception de la maquette complète (user / admin)</li><br>
+              <li>Intégration en HTML / CSS responsive à partir de la maquette</li><br>
+              <li>Gestion des utilisateurs et des places avec PHP et MySQL</li><br>
+              <li>Authentification sécurisée (connexion, sessions, droits user/admin)</li><br>
+              <li>Tableau de bord administrateur avec file d’attente et statistiques</li>
+            </ul>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">HTML</span>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">CSS</span>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">PHP</span>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">SQL</span>
+            <div class="project-actions">
+              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.8rem">
+              <img src="assets/pmcd.jpg" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/mip.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/mcp.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/map.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/mdrp.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/maap.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/mawp.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+
+              </div>
+            </div>
+          </article>
+
+      </section>
+    </section>
+
+    <!-- Expérience (avec fond fd) -->
+    <section id="experience" class="bg-fd" style="padding-top:2rem;padding-bottom:2rem">
+      <div class="container">
+        <h2 class="section-title">Stages et Expériences</h2>
+        <p>Comme pour la section projets, voici mes expériences en cartes détaillées, prêtes à être parcourues visuellement.</p>
+
+        <section class="projects-grid">
+          <article class="card">
+            <h4>Stage 1er année - ( Juin 2025)</h4>
+            <p>Maquette Réseaux en utilisant la technologie MPLS</p>
+            <ul class="muted" style="margin:0 0 0.8rem 1.2rem;display:grid;gap:0.3rem">
+              <li>Configuration des équipements réseau.</li><br>
+              <li>Mise enplace des protocoles (OSPF, Label ...) </li><br>
+              <li>Tests de performance et optimisation.</li><br>
+              <li>Documentation technique et formation du personnel.</li>
+            </ul>
+            <div class="project-actions">
+              <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">GNS3</span>
+              <span class="badge" style="background:rgba(174,239,255,0.1);color:#aeefff">Ligne de commande</span>
+              <span class="badge" style="background:rgba(127,227,255,0.08);color:#7fe3ff">Git</span>
+            </div>
+            <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.8rem">
+              <img src="assets/r.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/ping.png" alt="Visuel stage ABC 2" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/wire.png" alt="Visuel stage ABC 3" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            </div>
+          </article>
+
+          <article class="card">
+            <h4>Base de données pour répertorier des équipements</h4>
+            <p>Création d'une base de données simple pour gérer des équipements réseau.</p>
+            <ul class="muted" style="margin:0 0 0.8rem 1.2rem;display:grid;gap:0.3rem"><br>
+              <li>Conception du schéma de la base de données.</li><br>
+              <li>Implémentation des tables et relations.</li><br>
+              <li>Création de requêtes SQL pour la gestion des équipements.</li><br>
+              <li>Tests et validation des données.</li><br>
+              <li>formation et supervisation des utilisateurs.</li>
+            </ul>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">SQL</span>
+            <div class="project-actions">
+              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.8rem">
+              <img src="assets/s.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/st.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/st2.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <h4>Stage 2ème année - ( Janvier - Février2026 )</h4>
+            <p>Amélioration d'un script (Python) pour relever la température des équipements réseau.</p>
+            <ul class="muted" style="margin:0 0 0.8rem 1.2rem;display:grid;gap:0.3rem"><br>
+              <li>Conception du script python.</li><br>
+              <li>Interaction avec la console pour un meilleur filtrage des équipements</li><br>
+              <li>Création de dictionnaires pour la gestion des équipements.</li><br>
+              <li>Tests et validation des données.</li><br>
+              <li>formation et supervisation des utilisateurs.</li>
+            </ul>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">Python</span>
+            <div class="project-actions">
+              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.8rem">
+              
+              <!-- Lien de téléchargement et affichage du fichier temps_csv -->
+              <div style="background: rgba(127, 227, 255, 0.08); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                <h5 style="color: #7fe3ff; margin: 0 0 0.5rem 0;">Données de température collectées</h5>
+                <div style="margin-bottom: 1rem;">
+                  <a href="assets/temps_csv.py" download="temps_csv.pdf" class="btn" style="display: inline-block; margin-right: 0.5rem;">
+                    📥 Télécharger le fichier
+                  </a>
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+
+    <!-- Veille (avec fond sd) -->
+    <section id="veille" class="bg-sd" style="padding-top:2rem;padding-bottom:2rem">
+      <div class="container">
+        <h2 class="section-title">Veille technologique</h2>
+        <div class="card" style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem 1.2rem;border-radius:12px;margin-bottom:1rem">
+          <h3 style="margin-top:0;color:#bff7ff">Qu'est-ce que la veille technologique&nbsp;?</h3>
+          <p style="margin:0 0 0.6rem;text-align:justify">La veille technologique, élément de la veille stratégique, consiste à surveiller les évolutions techniques et les innovations dans un secteur d’activité donné. Elle comprend la <strong>surveillance</strong>, la <strong>collecte</strong>, le <strong>partage</strong> et la <strong>diffusion</strong> d’informations permettant d’anticiper des changements en matière de recherche, développement, brevets, lancement de nouveaux produits, matériaux, processus ou concepts. L'objectif est d'évaluer l'impact potentiel des innovations sur l'environnement et l'organisation afin de mieux orienter les choix techniques et stratégiques.</p>
+        </div>
+
+        <h3 style="margin-top:0.6rem">🔍 Mon sujet de veille</h3>
+        <div class="card" style="background:rgba(10,20,40,0.7);border-left:4px solid #7fe3ff;padding:1.2rem;border-radius:10px;margin-bottom:1rem">
+          <h4 style="color:#7fe3ff;margin-top:0">L'IA va-t-elle remplacer les développeurs Web ?</h4>
+          <p style="text-align:justify;margin:0.5rem 0">Je surveille l'apparition des <strong>outils d'IA capables de créer des sites et de corriger des bugs tout seuls</strong> (comme les agents autonomes Chat GPT, Deepseek ou Gémini). Je regarde si ces outils font gagner du temps aux développeurs ou s'ils commencent à faire le travail à leur place.</p>
+          <p style="text-align:justify;margin:0.5rem 0"><strong>Pourquoi ce sujet ?</strong><br><br> C'est là que mon projet professionnel intervient : je veux devenir <strong>analyste en cybersécurité</strong>. Pourquoi ? Parce que même si l'IA remplace le développeur pour "écrire" le code, il faudra toujours un humain expert pour <strong>vérifier que ce code est sûr</strong>. L'IA fait souvent des erreurs invisibles que seul un analyste cyber peut détecter. En suivant ce sujet, je me prépare à devenir celui qui contrôle et sécurise ce que l'IA fabrique. </p>
+        </div>
+
+        <h3>Les principaux outils de ma veille</h3>
+        <div class="projects-grid" style="margin-bottom:1rem">
+          <div class="card" style="min-height: 400px;">
+    <h4>Google Alerts</h4>
+    <p class="muted">Alertes en temps réel sur l'Intelligence Artificielle dans le développement web</p>
+    
+              <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                  <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177476/"></script>
+                  </div>
+          </div>
+          <div class="card">
+            <h4>Feedly</h4>
+            <p class="muted">Agrégation de flux RSS pour suivre blogs, sites techniques et publications sur l'IA.</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177496/"></script>
+            </div>
+          </div>
+          <div class="card">
+            <h4>RSS Feeds</h4>
+            <p class="muted">Flux RSS personnalisés sur l'impact de l'IA en développement web</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177500/"></script>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Twitter / X</h4>
+            <p class="muted">Suivre des experts, threads et annonces en temps réel sur l'IA et le développement.</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177510/"></script>
+            </div>
+
+          </div>
+          <div class="card">
+            <h4>Pocket</h4>
+            <p class="muted">Sauvegarde d'articles intéressants sur l'IA pour lecture différée.</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177515/"></script>
+            </div>
+
+          </div>
+        </div>
+
+        <h3>Mots-clés suivis</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem">
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#IA</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Développement</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#WEB</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Développement Web</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Avenir Dans Le Développement</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Intélligence Artificielle</span>
+        </div>
+
+        <h3>Ressources et articles suivis</h3>
+        <div class="projects-grid" style="margin-bottom:1rem">
+          <div class="card">
+            <h4>Outils d'IA pour le développement web</h4>
+            <p class="muted">Exploration des générateurs de code comme GitHub Copilot, ChatGPT pour le développement, et leur impact sur la productivité.</p>
+            <a href="https://www.fed-group.ca/fed-it/conseils/lia-va-telle-remplacer-les-developpeurs" target="_blank" rel="noopener noreferrer">Est-ce que l'IA va remplacer les développeurs ?</a>
+          </div>
+          <div class="card">
+            <h4>Sécurité des applications générées par IA</h4>
+            <p class="muted">Analyse des vulnérabilités potentielles dans le code produit par l'IA et stratégies de sécurisation.</p>
+            <a href="https://www.clementmenczynski.fr/articles/ia-developpeur-2026-mutation-metier-javascript" target="_blank" rel="noopener noreferrer">IA développeur : ce qui a vraiment changé en 2026</a>
+          </div>
+          <div class="card">
+            <h4>Évolution des métiers du développement</h4>
+            <p class="muted">Études sur comment l'IA transforme les rôles des développeurs et l'émergence de nouveaux profils comme les analystes cyber.</p>
+            <a href="https://www.dedigo.fr/emploi-web-perspectives-2025/" target="_blank" rel="noopener noreferrer">Le marché de l'emploi dans le secteur du web : analyse actuelle, perspectives d'avenir et prévisions salariales</a>
+          </div>
+        </div>
+
+        <!-- Statistiques d'utilisation des outils IA par les développeurs web -->
+        <h3 style="margin-top: 2rem;">Statistiques d'utilisation par les développeurs web</h3>
+        
+        <!-- Grande statistique générale sur l'utilisation de l'IA -->
+        <div class="card" style="background: linear-gradient(135deg, rgba(127, 227, 255, 0.1), rgba(174, 239, 255, 0.05)); border: 2px solid #7fe3ff; margin-bottom: 2rem; text-align: center; padding: 2rem;">
+          <h3 style="color: #7fe3ff; margin-bottom: 1rem; font-size: 1.8rem;">Utilisation régulière de l'IA par les développeurs</h3>
+          
+          <!-- Grand cercle de progression -->
+          <div style="width: 200px; height: 200px; margin: 2rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+            <svg class="progress-circle main-stat-circle" width="200" height="200" style="transform: rotate(-90deg);">
+              <!-- Fond du cercle -->
+              <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="12"></circle>
+              <!-- Cercle de progression rempli à 85% -->
+              <circle cx="100" cy="100" r="85" fill="none" stroke="#7fe3ff" stroke-width="12" stroke-dasharray="535.5 566.9" stroke-linecap="round" style="transition: stroke-dasharray 0.8s ease;"></circle>
+            </svg>
+            <div style="position: absolute; text-align: center;">
+              <p style="font-size: 3rem; font-weight: bold; color: #7fe3ff; margin: 0; line-height: 1;">85%</p>
+              <p style="font-size: 1.1rem; color: #d8f3ff; margin: 0.5rem 0 0 0;">développeurs</p>
+              <p style="font-size: 0.9rem; color: #bff7ff; margin: 0.2rem 0 0 0;">utilisent l'IA</p>
+            </div>
+          </div>
+          
+          <p style="font-size: 1.1rem; color: #e6f7ff; margin: 1.5rem 0 1rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Selon les études récentes, <strong>85% des développeurs</strong> intègrent désormais l'intelligence artificielle dans leur workflow quotidien, 
+            révolutionnant ainsi les pratiques de développement logiciel.
+          </p>
+          
+          <div style="background: rgba(127, 227, 255, 0.08); padding: 1rem; border-radius: 8px; margin-top: 1.5rem;">
+            <p style="font-size: 0.9rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Source :</strong></p>
+            <ul style="margin: 0.5rem 0 0; padding-left: 1.5rem; font-size: 0.85rem; text-align: left; display: inline-block;">
+              <li><a href="https://blog.jetbrains.com/research/2025/10/state-of-developer-ecosystem-2025/" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">L’état de l’écosystème des développeurs 2025</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 1.5rem;">
+          
+          <!-- ChatGPT / OpenAI -->
+          <div class="card" style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png" alt="ChatGPT Logo" style="width: 80px; height: 80px; margin: 0 auto 1rem; object-fit: contain;">
+            <h4 style="color: #7fe3ff; margin-bottom: 0.5rem;">ChatGPT / OpenAI</h4>
+            
+            <!-- Circular Progress Bar -->
+            <div style="width: 140px; height: 140px; margin: 1rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+              <svg class="progress-circle" width="140" height="140" style="transform: rotate(-90deg);">
+                <!-- Fond du cercle -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="8"></circle>
+                <!-- Cercle de progression rempli à 76% -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#7fe3ff" stroke-width="8" stroke-dasharray="285.76 376" stroke-linecap="round" style="transition: stroke-dasharray 0.5s ease;"></circle>
+              </svg>
+              <div style="position: absolute; text-align: center;">
+                <p style="font-size: 2rem; font-weight: bold; color: #7fe3ff; margin: 0;">41%</p>
+                <p style="font-size: 0.85rem; color: #d8f3ff; margin: 0;">Développeurs</p>
+              </div>
+            </div>
+
+            <p class="muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Pourcentage de développeurs web utilisant ChatGPT pour des tâches de codage et développement web.</p>
+            
+            <div style="background: rgba(127, 227, 255, 0.08); padding: 0.8rem; border-radius: 8px; margin-top: 1rem;">
+              <p style="font-size: 0.85rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Sources :</strong></p>
+              <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.8rem;">
+                <li><a href="https://www.hitechpros.com/2025/11/05/utilisation-ia-developpeurs-2025/#content" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">Statista - Developer AI Tool Usage</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Deepseek -->
+          <div class="card" style="text-align: center;">
+            <img src="assets/deep.webp" alt="Deepseek Logo" style="width: 80px; height: 80px; margin: 0 auto 1rem; object-fit: contain;">
+            <h4 style="color: #7fe3ff; margin-bottom: 0.5rem;">Deepseek</h4>
+            
+            <!-- Circular Progress Bar -->
+            <div style="width: 140px; height: 140px; margin: 1rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+              <svg class="progress-circle" width="140" height="140" style="transform: rotate(-90deg);">
+                <!-- Fond du cercle -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="8"></circle>
+                <!-- Cercle de progression rempli à 38% -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#7fe3ff" stroke-width="8" stroke-dasharray="142.88 376" stroke-linecap="round" style="transition: stroke-dasharray 0.5s ease;"></circle>
+              </svg>
+              <div style="position: absolute; text-align: center;">
+                <p style="font-size: 2rem; font-weight: bold; color: #7fe3ff; margin: 0;">10%</p>
+                <p style="font-size: 0.85rem; color: #d8f3ff; margin: 0;">Développeurs</p>
+              </div>
+            </div>
+
+            <p class="muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Pourcentage croissant de développeurs adoptant Deepseek pour ses capacités de raisonnement avancé et son accessibilité.</p>
+            
+            <div style="background: rgba(127, 227, 255, 0.08); padding: 0.8rem; border-radius: 8px; margin-top: 1rem;">
+              <p style="font-size: 0.85rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Sources :</strong></p>
+              <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.8rem;">
+                <li><a href="https://www.hitechpros.com/2025/11/05/utilisation-ia-developpeurs-2025/#content" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">Deepseek - Developer Survey</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- GitHub Copilot -->
+          <div class="card" style="text-align: center;">
+            <img src="assets/git.webp" alt="GitHub Copilot Logo" style="width: 80px; height: 80px; margin: 0 auto 1rem; object-fit: contain;">
+            <h4 style="color: #7fe3ff; margin-bottom: 0.5rem;">GitHub Copilot</h4>
+            
+            <!-- Circular Progress Bar -->
+            <div style="width: 140px; height: 140px; margin: 1rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+              <svg class="progress-circle" width="140" height="140" style="transform: rotate(-90deg);">
+                <!-- Fond du cercle -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="8"></circle>
+                <!-- Cercle de progression rempli à 62% -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#7fe3ff" stroke-width="8" stroke-dasharray="233.12 376" stroke-linecap="round" style="transition: stroke-dasharray 0.5s ease;"></circle>
+              </svg>
+              <div style="position: absolute; text-align: center;">
+                <p style="font-size: 2rem; font-weight: bold; color: #7fe3ff; margin: 0;">30%</p>
+                <p style="font-size: 0.85rem; color: #d8f3ff; margin: 0;">Développeurs</p>
+              </div>
+            </div>
+
+            <p class="muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Pourcentage de développeurs web intégrant GitHub Copilot dans leur workflow quotidien pour l'assistance au code.</p>
+            
+            <div style="background: rgba(127, 227, 255, 0.08); padding: 0.8rem; border-radius: 8px; margin-top: 1rem;">
+              <p style="font-size: 0.85rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Sources :</strong></p>
+              <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.8rem;">
+                <li><a href="https://www.hitechpros.com/2025/11/05/utilisation-ia-developpeurs-2025/#content" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">GitHub Blog - Copilot Adoption Report</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Analyse comparative -->
+        <div class="card" style="background: linear-gradient(180deg, rgba(127, 227, 255, 0.05), rgba(174, 239, 255, 0.02)); border-left: 4px solid #aeefff; margin-top: 1.5rem;">
+          <h4 style="color: #aeefff; margin-top: 0;">Analyse comparative et tendances</h4>
+          <p style="margin: 0.5rem 0; text-align: justify;">Ces statistiques montrent que <strong>ChatGPT domine le marché</strong> avec 41% d'adoption parmi les développeurs web, suivi de <strong>GitHub Copilot</strong> à 30%. <strong>Deepseek</strong>, bien que plus récent avec 10% d'adoption, gagne rapidement en popularité grâce à ses capacités avancées et son accessibilité. La tendance montre une adoption croissante des outils IA, validant l'importance de ma veille technologique sur ce sujet crucial.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Épreuve -->
+    <section id="epreuve" class="bg-sq" style="padding-top:2rem;padding-bottom:2rem;background-image:url('assets/er.jpg');background-size:cover;background-position:center">
+      <div class="container">
+        <h2 class="section-title">Épreuve du Portfolio</h2>
+        
+        
+
+        <h3 style="color:#aeefff">Tableau de Synthèse</h3>
+        <p>Retrouvez ci-dessous le tableau de synthèse de l'épreuve E5 :</p>
+
+        <div class="pdf-placeholder">
+          <embed id="tableauEmbed" src="assets/Tableau de synthèse.pdf" type="application/pdf" width="100%" height="520px">
+          <p class="muted" style="margin-top:0.6rem">Si le PDF ne s'affiche pas dans votre navigateur, utilisez le bouton ci-dessous pour télécharger le fichier :</p>
+          <a class="btn" href="assets/Tableau de synthèse.pdf" target="_blank" rel="noopener noreferrer">Télécharger le tableau (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (with bg) -->
+    <section id="contact" class="bg-ad" style="padding-top:2rem;padding-bottom:2rem">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p>Vous pouvez me contacter via le formulaire ci-dessous ou par les coordonnées listées.</p>
+
+        <section class="card">
+          <form id="contactForm" action="#" method="post" style="display:grid;gap:0.6rem">
+            <label>Nom / Prénom</label>
+            <input type="text" name="name" placeholder="Votre nom" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="votre@exemple.com" required>
+
+            <label>Message</label>
+            <textarea name="message" rows="6" placeholder="Votre message"></textarea>
+
+            <div style="display:flex;gap:0.6rem">
+              <button class="btn" type="submit">Envoyer</button>
+              <a class="btn ghost" href="#top">Annuler</a>
+            </div>
+          </form>
+        </section>
+
+        <section style="margin-top:1rem">
+          <h3>Coordonnées</h3>
+          <p class="muted">Email: <strong>bensam.dev@gmail.com</strong> — Téléphone: <strong>06 00 00 00 00</strong></p>
+          <p style="margin-top:0.6rem">
+            <a class="btn" href="https://github.com/bensam95" target="_blank" rel="noopener noreferrer">Voir mon GitHub</a>
+          </p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 - Portfolio BTS SIO SLAM Benjamin SAM</span>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+
+  <!-- Modal pour images plein écran -->
+  <div id="imageModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:1000;justify-content:center;align-items:center;cursor:pointer" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Image agrandie" style="max-width:90%;max-height:90%;border-radius:8px">
+    <span style="position:absolute;top:20px;right:30px;color:white;font-size:2rem;cursor:pointer;font-weight:bold" onclick="closeModal()">&times;</span>
+  </div>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      modalImg.src = src;
+      modal.style.display = 'flex';
+    }
+    
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.style.display = 'none';
+    }
+    
+    // Fermer la modal au clic sur le fond
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+    
+    // Fermer avec la touche Échap
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
