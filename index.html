@@ -19,7 +19,20 @@
 
     .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,8,20,0.6) 0%, rgba(3,8,20,0.65) 50%, rgba(3,8,20,0.7) 100%); pointer-events: none; z-index: 0; }
     .hero .hero-grid, .hero .hero-text, .hero .hero-card { position: relative; z-index: 1; }
-    .site-header { position: fixed; z-index: 50; }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: linear-gradient(45deg, #7fe3ff, #aeefff);
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    .badge:hover {
+      background: rgba(127,227,255,0.3) !important;
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
 <body>
@@ -43,7 +56,7 @@
         <div class="hero-text">
           <h1>Portfolio BTS SIO SLAM</h1>
           <p>Bienvenue sur mon Portfolio !</p></br>
-          <p>Je m'appelle Benjamin SAM. Je conçois et développe des applications (web et logiciels) : conception, bases de données, back-end, et interfaces.</p>
+          <p>Je m'appelle <strong>Benjamin SAM</strong>. Je conçois et développe des applications (web et logiciels) : conception, bases de données, back-end, et interfaces.</p>
           <p class="muted">Explore mes projets, expériences et ma démarche de veille.</p>
           <div class="hero-cta">
             <a href="#projects" class="btn">Voir mes projets</a>
@@ -57,12 +70,12 @@
                 <p class="muted" style="margin:0.25rem 0 0;font-size:0.95rem">Téléchargez ou visualisez rapidement mon CV.</p>
               </div>
               <div style="display:flex;gap:0.5rem">
-                <a class="btn" href="assets/CV - Benjamin Sam.pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
+                <a class="btn" href="assets/CV-Benjamin Sam .pdf" target="_blank" rel="noopener noreferrer">Télécharger</a>
                 <button class="btn ghost" data-toggle="cv-embed-hero">Aperçu</button>
               </div>
             </div>
             <div id="cv-embed-hero" class="pdf-placeholder" style="display:none;margin-top:0.6rem">
-              <embed src="assets/CV - Benjamin Sam.pdf" type="application/pdf" width="100%" height="320px">
+              <embed src="assets/CV-Benjamin Sam .pdf" type="application/pdf" width="100%" height="320px">
             </div>
           </div>
         </div>
@@ -80,7 +93,7 @@
       </div>
     </section>
 
-    <!-- CV moved to hero area (mini preview). Original section removed to avoid duplication. -->
+    <!-- CV moved to hero area (mini preview). Original section removed to avoid duplication sir. -->
 
     <!-- Parcours / Diplômes -->
     <section id="parcours" class="container" style="padding-top:2rem;padding-bottom:2rem">
@@ -121,7 +134,7 @@
       <div class="container">
       <h2>À propos</h2>
       <div class="bts-sio-presentation" style="background:rgba(10,20,40,0.65);border-radius:14px;padding:2rem 1.5rem 1.5rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 4px 24px rgba(0,0,0,0.10);">
-        <h3 style="color:#7fe3ff;font-family:Orbitron,sans-serif;margin-top:0;">Qu'est-ce que le BTS SIO&nbsp;? 🎓</h3>
+        <h3 style="color:#7fe3ff;font-family:Orbitron,sans-serif;margin-top:0;">Qu'est-ce que le BTS SIO&nbsp;? </h3>
         <p>Avant de parler de mon parcours, laissez-moi vous présenter la filière qui me passionne&nbsp;:</p>
         <p><strong>Le Brevet de Technicien Supérieur Services Informatiques aux Organisations (BTS SIO)</strong> s'adresse à celles et ceux qui souhaitent se former en deux ans aux métiers de l'<strong>administration réseau</strong> ou du <strong>développement</strong>. Ce diplôme permet d'intégrer rapidement le marché du travail ou de poursuivre des études dans l'informatique.</p>
         <h4 style="color:#aeefff;margin-bottom:0.5rem;">Deux spécialités au choix&nbsp;:</h4>
@@ -130,12 +143,12 @@
             <h5 style="color:#b6f0ff;margin:0.5rem 0 0.2rem;">Option SISR <span style="font-size:1.2em;">🖧</span></h5>
             <p style="margin:0 0 0.5rem;">La <strong>Solution d'Infrastructure, Systèmes et Réseaux</strong> forme des professionnels capables d'installer, maintenir et sécuriser les réseaux et équipements informatiques d'une entreprise.</p>
             <ul style="margin:0 0 0.5rem 1.2rem;">
-              <li>Administrateur systèmes et réseaux</li>
-              <li>Informaticien support et déploiement</li>
-              <li>Pilote d’exploitation</li>
-              <li>Support systèmes et réseaux</li>
-              <li>Technicien d’infrastructure</li>
-              <li>Technicien de production</li>
+              <li>Administrateur systèmes et réseaux</li><br>
+              <li>Informaticien support et déploiement</li><br>
+              <li>Pilote d’exploitation</li><br>
+              <li>Support systèmes et réseaux</li><br>
+              <li>Technicien d’infrastructure</li><br>
+              <li>Technicien de production</li><br>
               <li>Technicien micro et réseaux</li>
             </ul>
           </div>
@@ -143,13 +156,13 @@
             <h5 style="color:#b6f0ff;margin:0.5rem 0 0.2rem;">Option SLAM <span style="font-size:1.2em;">👨‍💻</span> <span style="font-size:0.9em;color:#7fe3ff;">(ma spécialité)</span></h5>
             <p style="margin:0 0 0.5rem;">La <strong>Solution Logicielle et Applications Métiers</strong> forme des spécialistes du développement&nbsp;: analyse des besoins, rédaction de cahier des charges, développement, intégration et déploiement d'applications.</p>
             <ul style="margin:0 0 0.5rem 1.2rem;">
-              <li>Développeur d’applications informatiques</li>
-              <li>Développeur informatique</li>
-              <li>Analyste d’applications ou d’études</li>
-              <li>Analyste programmeur</li>
-              <li>Programmeur analyste</li>
-              <li>Programmeur d’applications</li>
-              <li>Responsable des services applicatifs</li>
+              <li>Développeur d’applications informatiques</li><br>
+              <li>Développeur informatique</li><br>
+              <li>Analyste d’applications ou d’études</li><br>
+              <li>Analyste programmeur</li><br>
+              <li>Programmeur analyste</li><br>
+              <li>Programmeur d’applications</li><br>
+              <li>Responsable des services applicatifs</li><br>
               <li>Technicien d’études informatiques</li>
             </ul>
           </div>
@@ -240,17 +253,24 @@
         </style>
       </div>
 
+      <h3 style="color:#7fe3ff;margin-top:2rem">Projets Scolaires</h3>
+      <p>Projets réalisés dans le cadre de mes études en BTS SIO SLAM.</p>
+
       <section class="projects-grid">
         <article class="card">
           <h4>Site de Location de Vehicule (PHP / MySQL / HTML / CSS)</h4>
           <p>Site web pour louer des Vehicules avec connexion, inscriptions et cybersécurité renforcée.</p>
-          <div class="project-actions">
-            <a class="btn" href="#projects">Démonstration</a>
-          </div>
           <div style="margin-top:1rem;display:flex;flex-direction:column;gap:1rem">
             <img src="assets/v.png" alt="Visuel 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
             <img src="assets/vi.png" alt="Visuel 2" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
             <img src="assets/vc.png" alt="Visuel 3" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <video width="100%" controls poster="assets/miniature-video.jpg" style="border-radius:8px; border: 1px solid rgba(127,227,255,0.2);">
+            <source src="assets/vet.mp4" type="video/mp4">
+            </video>
+            <img src="assets/vt.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vr.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vmr.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+            <img src="assets/vdmr.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
             <img src="assets/bd.png" alt="Visuel 4" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
           </div>
         </article>
@@ -258,9 +278,6 @@
         <article class="card">
           <h4>Base de données pour une location d'embarcation</h4>
           <p>developpement d'une base de données pour la gestion d'une location d'embarcation.</p>
-          <div class="project-actions">
-            <a class="btn" href="#projects">Démonstration</a>
-          </div>
           <div style="margin-top:1rem;display:flex;flex-direction:column;gap:1rem">
             <img src="assets/m.png" alt="Projet 2 visuel 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
             <img src="assets/m1.png" alt="Projet 2 visuel 2" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
@@ -271,9 +288,6 @@
         <article class="card">
           <h4>Gestion du Personnel des Ligues</h4>
           <p>Application Java développée avec Eclipse pour gérer les employés de différentes ligues hébergées par la Maison des Ligues (M2L).</p>
-          <div class="project-actions">
-            <a class="btn" href="#projects">Démonstration</a>
-          </div>
           <div style="margin-top:1rem;display:flex;flex-direction:column;gap:1rem">
             <img src="assets/g.png" alt="Gestion du Personnel visuel 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
             <img src="assets/g1.png" alt="Gestion du Personnel visuel 2" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
@@ -292,12 +306,12 @@
 
         <section class="projects-grid">
           <article class="card">
-            <h4>Stage - (2025)</h4>
+            <h4>Stage 1er année - ( Juin 2025)</h4>
             <p>Maquette Réseaux en utilisant la technologie MPLS</p>
             <ul class="muted" style="margin:0 0 0.8rem 1.2rem;display:grid;gap:0.3rem">
-              <li>Configuration des équipements réseau.</li>
-              <li>Mise enplace des protocoles (OFPS, Label ...) </li>
-              <li>Tests de performance et optimisation.</li>
+              <li>Configuration des équipements réseau.</li><br>
+              <li>Mise enplace des protocoles (OSPF, Label ...) </li><br>
+              <li>Tests de performance et optimisation.</li><br>
               <li>Documentation technique et formation du personnel.</li>
             </ul>
             <div class="project-actions">
@@ -320,11 +334,46 @@
               <li>Implémentation des tables et relations.</li><br>
               <li>Création de requêtes SQL pour la gestion des équipements.</li><br>
               <li>Tests et validation des données.</li><br>
-              <li>formation et supervisation des utilisateurs.</li><br>
+              <li>formation et supervisation des utilisateurs.</li>
             </ul>
-            <p>Aucune image apportée pour ce projet pour cause de confidentialité des données et de la clause de non-divulgation de l'entreprise.</p>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">SQL</span>
             <div class="project-actions">
-              <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">SQL</span>
+              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.8rem">
+              <img src="assets/s.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/st.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              <img src="assets/st2.png" alt="Visuel stage ABC 1" style="width:100%;height:auto;border-radius:8px;cursor:pointer" onclick="openModal(this.src)">
+              
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <h4>Stage 2ème année - ( Janvier - Février2026 )</h4>
+            <p>Amélioration d'un script (Python) pour relever la température des équipements réseau.</p>
+            <ul class="muted" style="margin:0 0 0.8rem 1.2rem;display:grid;gap:0.3rem"><br>
+              <li>Conception du schéma de la base de données.</li><br>
+              <li>Implémentation des tables et relations.</li><br>
+              <li>Création de requêtes SQL pour la gestion des équipements.</li><br>
+              <li>Tests et validation des données.</li><br>
+              <li>formation et supervisation des utilisateurs.</li>
+            </ul>
+            <span class="badge" style="background:rgba(127,227,255,0.1);color:#7fe3ff">Python</span>
+            <div class="project-actions">
+              <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.8rem">
+              <video width="100%" controls poster="assets/miniature-video.jpg" style="border-radius:8px; border: 1px solid rgba(127,227,255,0.2);">
+            <source src="assets/Temp.mp4" type="video/mp4">
+            </video>
+              
+              <!-- Lien de téléchargement et affichage du fichier temps_csv -->
+              <div style="background: rgba(127, 227, 255, 0.08); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                <h5 style="color: #7fe3ff; margin: 0 0 0.5rem 0;">Données de température collectées</h5>
+                <div style="margin-bottom: 1rem;">
+                  <a href="assets/temps_csv.py" download="temps_equipements.csv" class="btn" style="display: inline-block; margin-right: 0.5rem;">
+                    📥 Télécharger le fichier
+                  </a>
+                </div>
+              </div>
+              
+              </div>
             </div>
           </article>
         </section>
@@ -340,80 +389,214 @@
           <p style="margin:0 0 0.6rem;text-align:justify">La veille technologique, élément de la veille stratégique, consiste à surveiller les évolutions techniques et les innovations dans un secteur d’activité donné. Elle comprend la <strong>surveillance</strong>, la <strong>collecte</strong>, le <strong>partage</strong> et la <strong>diffusion</strong> d’informations permettant d’anticiper des changements en matière de recherche, développement, brevets, lancement de nouveaux produits, matériaux, processus ou concepts. L'objectif est d'évaluer l'impact potentiel des innovations sur l'environnement et l'organisation afin de mieux orienter les choix techniques et stratégiques.</p>
         </div>
 
-        <h3 style="margin-top:0.6rem">Les principaux outils de ma veille</h3>
+        <h3 style="margin-top:0.6rem">🔍 Mon sujet de veille</h3>
+        <div class="card" style="background:rgba(10,20,40,0.7);border-left:4px solid #7fe3ff;padding:1.2rem;border-radius:10px;margin-bottom:1rem">
+          <h4 style="color:#7fe3ff;margin-top:0">L'IA va-t-elle remplacer les développeurs Web ?</h4>
+          <p style="text-align:justify;margin:0.5rem 0">Je surveille l'apparition des <strong>outils d'IA capables de créer des sites et de corriger des bugs tout seuls</strong> (comme les agents autonomes Chat GPT, Deepseek ou Gémini). Je regarde si ces outils font gagner du temps aux développeurs ou s'ils commencent à faire le travail à leur place.</p>
+          <p style="text-align:justify;margin:0.5rem 0"><strong>Pourquoi ce sujet ?</strong><br><br> C'est là que mon projet professionnel intervient : je veux devenir <strong>analyste en cybersécurité</strong>. Pourquoi ? Parce que même si l'IA remplace le développeur pour "écrire" le code, il faudra toujours un humain expert pour <strong>vérifier que ce code est sûr</strong>. L'IA fait souvent des erreurs invisibles que seul un analyste cyber peut détecter. En suivant ce sujet, je me prépare à devenir celui qui contrôle et sécurise ce que l'IA fabrique. </p>
+        </div>
+
+        <h3>Les principaux outils de ma veille</h3>
         <div class="projects-grid" style="margin-bottom:1rem">
-          <div class="card">
-            <h4>Google Alerts</h4>
-            <p class="muted">Alertes par e-mail sur mots-clés précis (ex. noms de frameworks, versions, CVE).</p>
-            <a class="muted" style="display:inline-block;margin-top:0.4rem;color:#7fe3ff" href="https://incyber.org/article/cybersecurite-des-vehicules-connectes-une-course-entre-cybercriminels-et-constructeurs/" target="_blank" rel="noopener noreferrer">Article : cybersécurité des véhicules connectés</a>
+          <div class="card" style="min-height: 400px;">
+    <h4>Google Alerts</h4>
+    <p class="muted">Alertes en temps réel sur l'Intelligence Artificielle dans le développement web</p>
+    
+              <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                  <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177476/"></script>
+                  </div>
           </div>
           <div class="card">
-            <h4>Feedly / RSS</h4>
-            <p class="muted">Agrégation de flux pour suivre blogs, sites techniques et publications.</p>
-            <a class="muted" style="display:inline-block;margin-top:0.4rem;color:#7fe3ff" href="https://voitureautonome.com/securite-voitures-autonomes-defis-et-solutions-face-aux-cyberattaques/" target="_blank" rel="noopener noreferrer">Article : Algorithme de chiffrement des véhicules connectés</a>
+            <h4>Feedly</h4>
+            <p class="muted">Agrégation de flux RSS pour suivre blogs, sites techniques et publications sur l'IA.</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177496/"></script>
+            </div>
           </div>
           <div class="card">
-            <h4>GitHub</h4>
-            <p class="muted">Suivi des dépôts, des releases et des issues pour repérer les évolutions et outils émergents.</p>
+            <h4>RSS Feeds</h4>
+            <p class="muted">Flux RSS personnalisés sur l'impact de l'IA en développement web</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177500/"></script>
+            </div>
           </div>
           <div class="card">
-            <h4>Twitter / X & communautés</h4>
-            <p class="muted">Suivre des experts, threads et annonces en temps réel.</p>
-            <a class="muted" style="display:inline-block;margin-top:0.4rem;color:#7fe3ff" href="https://www.ssldragon.com/fr/blog/types-de-chiffrement-algorithmes/" target="_blank" rel="noopener noreferrer">Article : Initiation aux types de chiffrement</a>
+            <h4>Twitter / X</h4>
+            <p class="muted">Suivre des experts, threads et annonces en temps réel sur l'IA et le développement.</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177510/"></script>
+            </div>
 
           </div>
           <div class="card">
-            <h4>Newsletters / Pocket</h4>
-            <p class="muted">Synthèses régulières et sauvegarde d'articles intéressants pour lecture différée.</p>
+            <h4>Pocket</h4>
+            <p class="muted">Sauvegarde d'articles intéressants sur l'IA pour lecture différée.</p>
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden;">
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Chargement des alertes..." data-fw-param="177515/"></script>
+            </div>
+
           </div>
         </div>
 
         <h3>Mots-clés suivis</h3>
         <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:1.5rem">
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#chiffrement</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#AES</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#RSA</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#ECC</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#voituresautonomes</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#V2X</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#cybersécurité</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#cryptographie</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#TLS</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#DTLS</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#PKI</span>
-          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#ISO21434</span>
-        </div>
-
-        <h3>Démarche (méthode simple)</h3>
-        <ol>
-          <li><strong>Définir</strong> des mots-clés et sujets prioritaires.</li>
-          <li><strong>Configurer</strong> les alertes et flux (Google Alerts, listes RSS, suivi GitHub).</li>
-          <li><strong>Collecter</strong> et classer les sources (tags, dossiers, Pocket).</li>
-          <li><strong>Synthétiser</strong> régulièrement (compte-rendu mensuel, points d'action).</li>
-          <li><strong>Expérimenter</strong> ou partager une veille interne quand un sujet mérite une validation technique.</li>
-        </ol>
-
-        <h3 style="margin-top:1.5rem">🔍 Mon sujet de veille</h3>
-        <div class="card" style="background:rgba(10,20,40,0.7);border-left:4px solid #7fe3ff;padding:1.2rem;border-radius:10px;margin-bottom:1rem">
-          <h4 style="color:#7fe3ff;margin-top:0">Importance des algorithmes de chiffrement dans les voitures autonomes</h4>
-          <p style="text-align:justify;margin:0.5rem 0">Je suis en veille sur le rôle des <strong>algorithmes de chiffrement</strong> (AES, RSA, ECC), des <strong>protocoles</strong> (TLS, DTLS) et des <strong>mécanismes d'authentification</strong> (certificats, signatures numériques) pour sécuriser les communications et données des véhicules autonomes.</p>
-          <p style="text-align:justify;margin:0.5rem 0"><strong>Pourquoi ce sujet ?</strong><br><br> La voiture autonome échange en continu avec capteurs, unités de contrôle, infrastructures V2X et services cloud. Sans chiffrement robuste et gestion de clés fiable, elle est exposée aux attaques (interception, altération, usurpation) mettant en jeu la sécurité des passagers.De plus j'ai choisi ce sujet car je souhaiterai évoluer dans la cybersécurité et plus précisement en tant que analyste cyber. Ce métier m'amènera à comprendre comment fonctionne les algorithmes de chiffrement et plus précisement dans les voitures autonomes dans ce sujet.</p>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#IA</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Développement</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#WEB</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Développement Web</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Avenir Dans Le Développement</span>
+          <span class="badge" style="background:rgba(127,227,255,0.15);color:#7fe3ff;padding:0.5rem 1rem;font-size:0.95rem">#Intélligence Artificielle</span>
         </div>
 
         <h3>Ressources et articles suivis</h3>
         <div class="projects-grid" style="margin-bottom:1rem">
           <div class="card">
-            <h4>Cryptographie appliquée</h4>
-            <p class="muted">AES/GCM, RSA, ECC (Curve25519, secp256r1), gestion de clés, HSM embarqués.</p>
+            <h4>Outils d'IA pour le développement web</h4>
+            <p class="muted">Exploration des générateurs de code comme GitHub Copilot, ChatGPT pour le développement, et leur impact sur la productivité.</p>
+            <a href="https://www.fed-group.ca/fed-it/conseils/lia-va-telle-remplacer-les-developpeurs" target="_blank" rel="noopener noreferrer">Est-ce que l'IA va remplacer les développeurs ?</a>
           </div>
           <div class="card">
-            <h4>Protocoles & V2X</h4>
-            <p class="muted">TLS/DTLS, IEEE 1609.2, sécurité des messages V2V/V2I, PKI automobile.</p>
+            <h4>Sécurité des applications générées par IA</h4>
+            <p class="muted">Analyse des vulnérabilités potentielles dans le code produit par l'IA et stratégies de sécurisation.</p>
+            <a href="https://www.clementmenczynski.fr/articles/ia-developpeur-2026-mutation-metier-javascript" target="_blank" rel="noopener noreferrer">IA développeur : ce qui a vraiment changé en 2026</a>
           </div>
           <div class="card">
-            <h4>Conformité & normes</h4>
-            <p class="muted">ISO/SAE 21434, UNECE WP.29, exigences de cybersécurité pour systèmes embarqués.</p>
+            <h4>Évolution des métiers du développement</h4>
+            <p class="muted">Études sur comment l'IA transforme les rôles des développeurs et l'émergence de nouveaux profils comme les analystes cyber.</p>
           </div>
+        </div>
+
+        <!-- Statistiques d'utilisation des outils IA par les développeurs web -->
+        <h3 style="margin-top: 2rem;">Statistiques d'utilisation par les développeurs web</h3>
+        
+        <!-- Grande statistique générale sur l'utilisation de l'IA -->
+        <div class="card" style="background: linear-gradient(135deg, rgba(127, 227, 255, 0.1), rgba(174, 239, 255, 0.05)); border: 2px solid #7fe3ff; margin-bottom: 2rem; text-align: center; padding: 2rem;">
+          <h3 style="color: #7fe3ff; margin-bottom: 1rem; font-size: 1.8rem;">Utilisation régulière de l'IA par les développeurs</h3>
+          
+          <!-- Grand cercle de progression -->
+          <div style="width: 200px; height: 200px; margin: 2rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+            <svg class="progress-circle main-stat-circle" width="200" height="200" style="transform: rotate(-90deg);">
+              <!-- Fond du cercle -->
+              <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="12"></circle>
+              <!-- Cercle de progression rempli à 85% -->
+              <circle cx="100" cy="100" r="85" fill="none" stroke="#7fe3ff" stroke-width="12" stroke-dasharray="535.5 566.9" stroke-linecap="round" style="transition: stroke-dasharray 0.8s ease;"></circle>
+            </svg>
+            <div style="position: absolute; text-align: center;">
+              <p style="font-size: 3rem; font-weight: bold; color: #7fe3ff; margin: 0; line-height: 1;">85%</p>
+              <p style="font-size: 1.1rem; color: #d8f3ff; margin: 0.5rem 0 0 0;">développeurs</p>
+              <p style="font-size: 0.9rem; color: #bff7ff; margin: 0.2rem 0 0 0;">utilisent l'IA</p>
+            </div>
+          </div>
+          
+          <p style="font-size: 1.1rem; color: #e6f7ff; margin: 1.5rem 0 1rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Selon les études récentes, <strong>85% des développeurs</strong> intègrent désormais l'intelligence artificielle dans leur workflow quotidien, 
+            révolutionnant ainsi les pratiques de développement logiciel.
+          </p>
+          
+          <div style="background: rgba(127, 227, 255, 0.08); padding: 1rem; border-radius: 8px; margin-top: 1.5rem;">
+            <p style="font-size: 0.9rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Source :</strong></p>
+            <ul style="margin: 0.5rem 0 0; padding-left: 1.5rem; font-size: 0.85rem; text-align: left; display: inline-block;">
+              <li><a href="https://blog.jetbrains.com/research/2025/10/state-of-developer-ecosystem-2025/" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">L’état de l’écosystème des développeurs 2025</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 1.5rem;">
+          
+          <!-- ChatGPT / OpenAI -->
+          <div class="card" style="text-align: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png" alt="ChatGPT Logo" style="width: 80px; height: 80px; margin: 0 auto 1rem; object-fit: contain;">
+            <h4 style="color: #7fe3ff; margin-bottom: 0.5rem;">ChatGPT / OpenAI</h4>
+            
+            <!-- Circular Progress Bar -->
+            <div style="width: 140px; height: 140px; margin: 1rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+              <svg class="progress-circle" width="140" height="140" style="transform: rotate(-90deg);">
+                <!-- Fond du cercle -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="8"></circle>
+                <!-- Cercle de progression rempli à 76% -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#7fe3ff" stroke-width="8" stroke-dasharray="285.76 376" stroke-linecap="round" style="transition: stroke-dasharray 0.5s ease;"></circle>
+              </svg>
+              <div style="position: absolute; text-align: center;">
+                <p style="font-size: 2rem; font-weight: bold; color: #7fe3ff; margin: 0;">41%</p>
+                <p style="font-size: 0.85rem; color: #d8f3ff; margin: 0;">Développeurs</p>
+              </div>
+            </div>
+
+            <p class="muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Pourcentage de développeurs web utilisant ChatGPT pour des tâches de codage et développement web.</p>
+            
+            <div style="background: rgba(127, 227, 255, 0.08); padding: 0.8rem; border-radius: 8px; margin-top: 1rem;">
+              <p style="font-size: 0.85rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Sources :</strong></p>
+              <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.8rem;">
+                <li><a href="https://www.hitechpros.com/2025/11/05/utilisation-ia-developpeurs-2025/#content" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">Statista - Developer AI Tool Usage (2024)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Deepseek -->
+          <div class="card" style="text-align: center;">
+            <img src="assets/deep.webp" alt="Deepseek Logo" style="width: 80px; height: 80px; margin: 0 auto 1rem; object-fit: contain;">
+            <h4 style="color: #7fe3ff; margin-bottom: 0.5rem;">Deepseek</h4>
+            
+            <!-- Circular Progress Bar -->
+            <div style="width: 140px; height: 140px; margin: 1rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+              <svg class="progress-circle" width="140" height="140" style="transform: rotate(-90deg);">
+                <!-- Fond du cercle -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="8"></circle>
+                <!-- Cercle de progression rempli à 38% -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#7fe3ff" stroke-width="8" stroke-dasharray="142.88 376" stroke-linecap="round" style="transition: stroke-dasharray 0.5s ease;"></circle>
+              </svg>
+              <div style="position: absolute; text-align: center;">
+                <p style="font-size: 2rem; font-weight: bold; color: #7fe3ff; margin: 0;">10%</p>
+                <p style="font-size: 0.85rem; color: #d8f3ff; margin: 0;">Développeurs</p>
+              </div>
+            </div>
+
+            <p class="muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Pourcentage croissant de développeurs adoptant Deepseek pour ses capacités de raisonnement avancé et son accessibilité.</p>
+            
+            <div style="background: rgba(127, 227, 255, 0.08); padding: 0.8rem; border-radius: 8px; margin-top: 1rem;">
+              <p style="font-size: 0.85rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Sources :</strong></p>
+              <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.8rem;">
+                <li><a href="https://www.hitechpros.com/2025/11/05/utilisation-ia-developpeurs-2025/#content" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">Deepseek - Developer Survey 2024</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- GitHub Copilot -->
+          <div class="card" style="text-align: center;">
+            <img src="assets/git.webp" alt="GitHub Copilot Logo" style="width: 80px; height: 80px; margin: 0 auto 1rem; object-fit: contain;">
+            <h4 style="color: #7fe3ff; margin-bottom: 0.5rem;">GitHub Copilot</h4>
+            
+            <!-- Circular Progress Bar -->
+            <div style="width: 140px; height: 140px; margin: 1rem auto; position: relative; display: flex; align-items: center; justify-content: center;">
+              <svg class="progress-circle" width="140" height="140" style="transform: rotate(-90deg);">
+                <!-- Fond du cercle -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="rgba(127, 227, 255, 0.1)" stroke-width="8"></circle>
+                <!-- Cercle de progression rempli à 62% -->
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#7fe3ff" stroke-width="8" stroke-dasharray="233.12 376" stroke-linecap="round" style="transition: stroke-dasharray 0.5s ease;"></circle>
+              </svg>
+              <div style="position: absolute; text-align: center;">
+                <p style="font-size: 2rem; font-weight: bold; color: #7fe3ff; margin: 0;">30%</p>
+                <p style="font-size: 0.85rem; color: #d8f3ff; margin: 0;">Développeurs</p>
+              </div>
+            </div>
+
+            <p class="muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Pourcentage de développeurs web intégrant GitHub Copilot dans leur workflow quotidien pour l'assistance au code.</p>
+            
+            <div style="background: rgba(127, 227, 255, 0.08); padding: 0.8rem; border-radius: 8px; margin-top: 1rem;">
+              <p style="font-size: 0.85rem; color: #bff7ff; margin: 0.3rem 0;"><strong>Sources :</strong></p>
+              <ul style="margin: 0.5rem 0 0; padding-left: 1.2rem; font-size: 0.8rem;">
+                <li><a href="https://www.hitechpros.com/2025/11/05/utilisation-ia-developpeurs-2025/#content" target="_blank" rel="noopener noreferrer" style="color: #7fe3ff; text-decoration: none;">GitHub Blog - Copilot Adoption Report</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Analyse comparative -->
+        <div class="card" style="background: linear-gradient(180deg, rgba(127, 227, 255, 0.05), rgba(174, 239, 255, 0.02)); border-left: 4px solid #aeefff; margin-top: 1.5rem;">
+          <h4 style="color: #aeefff; margin-top: 0;">Analyse comparative et tendances</h4>
+          <p style="margin: 0.5rem 0; text-align: justify;">Ces statistiques montrent que <strong>ChatGPT domine le marché</strong> avec 41% d'adoption parmi les développeurs web, suivi de <strong>GitHub Copilot</strong> à 30%. <strong>Deepseek</strong>, bien que plus récent avec 10% d'adoption, gagne rapidement en popularité grâce à ses capacités avancées et son accessibilité. La tendance montre une adoption croissante des outils IA, validant l'importance de ma veille technologique sur ce sujet crucial.</p>
+          <p style="margin: 0.5rem 0; font-style: italic; color: #bff7ff;"><strong>Note :</strong> Ces pourcentages sont basés sur des sondages réalisés en 2024 auprès de développeurs web professionnels et proviennent d'études de Statista, JetBrains et GitHub officiellement publiées.</p>
         </div>
       </div>
     </section>
@@ -423,52 +606,15 @@
       <div class="container">
         <h2 class="section-title">Épreuve du Portfolio</h2>
         
-        <div style="background:rgba(10,20,40,0.8);border-radius:14px;padding:2rem 1.5rem;margin-bottom:1.5rem;box-shadow:0 4px 24px rgba(0,0,0,0.3)">
-          <h3 style="color:#7fe3ff;margin-top:0"> L'Épreuve du Portfolio BTS SIO</h3>
-          
-          <p style="text-align:justify;margin:1rem 0">Le Portfolio est l'épreuve de validation des compétences professionnelles qui parachève le parcours en BTS SIO (options SLAM ou SISR). Il constitue la preuve tangible des savoir-faire acquis lors des stages et des projets.</p>
-          
-          <h4 style="color:#aeefff;margin-top:1.5rem">I. 🎯 Nature et Contenu du Dossier</h4>
-          <p style="text-align:justify;margin:0.5rem 0">Le Portfolio est un document synthétique et structuré dont la mission est de démontrer l'atteinte des objectifs du Référentiel des Activités Professionnelles (RAP).</p>
-          
-          <ul style="margin:0.5rem 0 1rem 1.5rem;text-align:justify">
-            <li><strong>Document de Référence :</strong> Il est organisé pour croiser les réalisations de l'étudiant avec les compétences exigées par le diplôme.</li>
-            <li><strong>Contenu Essentiel :</strong> Il comprend une synthèse du parcours et, surtout, des fiches descriptives détaillées pour chaque projet ou stage significatif. Ces fiches doivent être soutenues par des productions concrètes (annexes), comme du code, des schémas d'infrastructure, des procédures, ou de la documentation technique.</li>
-            <li><strong>Objectif :</strong> Chaque élément du dossier doit servir de point de départ à la discussion avec le jury pour justifier les choix techniques et la démarche professionnelle adoptée.</li>
-          </ul>
-          
-          <h4 style="color:#aeefff;margin-top:1.5rem">II. 🗣️ Le Déroulement de l'Épreuve Orale</h4>
-          <p style="text-align:justify;margin:0.5rem 0">L'épreuve prend la forme d'une soutenance orale face à un jury, avec une durée très précise.</p>
-          
-          <p style="text-align:justify;margin:0.5rem 0"><strong>⏱️ Durée Totale : 40 minutes</strong></p>
-          <p style="text-align:justify;margin:0.5rem 0 1rem">L'entretien est divisé en deux phases distinctes :</p>
-          
-          <div style="background:rgba(127,227,255,0.08);border-left:3px solid #7fe3ff;padding:1rem;margin:1rem 0;border-radius:8px">
-            <h5 style="color:#bff7ff;margin-top:0">1. Présentation par le Candidat (15 minutes maximum)</h5>
-            <ul style="margin:0.5rem 0 0 1.5rem">
-              <li><strong>Objectif :</strong> L'étudiant présente son Portfolio, met en lumière son parcours, et sélectionne les projets qu'il juge les plus pertinents pour illustrer son niveau de compétence.</li>
-              <li><strong>Enjeu :</strong> Il doit convaincre le jury de la validité de ses travaux et de sa capacité à assumer les responsabilités du métier visé (Développeur ou Administrateur/Intégrateur).</li>
-            </ul>
-          </div>
-          
-          <div style="background:rgba(174,239,255,0.08);border-left:3px solid #aeefff;padding:1rem;margin:1rem 0;border-radius:8px">
-            <h5 style="color:#bff7ff;margin-top:0">2. Entretien avec le Jury (25 minutes minimum)</h5>
-            <ul style="margin:0.5rem 0 0 1.5rem">
-              <li><strong>Objectif :</strong> Le jury interroge le candidat sur les détails de ses réalisations. Il vérifie la maîtrise technique, la capacité à prendre des décisions, à résoudre des problèmes et à justifier ses choix.</li>
-              <li><strong>Nature des Questions :</strong> Elles portent sur la méthodologie de travail, la veille technologique, les outils utilisés, les difficultés rencontrées, et le respect des normes professionnelles.</li>
-            </ul>
-          </div>
-          
-          <p style="text-align:justify;margin:1rem 0;font-style:italic;color:#aeefff"><strong>En conclusion,</strong> l'épreuve du Portfolio est un exercice de communication professionnelle où l'étudiant doit prouver non seulement ce qu'il a fait, mais aussi pourquoi il l'a fait, dans un temps imparti de 40 minutes.</p>
-        </div>
+        
 
         <h3 style="color:#aeefff">Tableau de Synthèse</h3>
         <p>Retrouvez ci-dessous le tableau de synthèse de l'épreuve E5 :</p>
 
         <div class="pdf-placeholder">
-          <embed id="tableauEmbed" src="assets/Tableau de synthèse.pdf" type="application/pdf" width="100%" height="520px">
+          <embed id="tableauEmbed" src="assets/Tableau de synthèse.pdf" type="application/pdf" width="100%" height="520px">
           <p class="muted" style="margin-top:0.6rem">Si le PDF ne s'affiche pas dans votre navigateur, utilisez le bouton ci-dessous pour télécharger le fichier :</p>
-          <a class="btn" href="assets/Tableau de synthèse.pdf" target="_blank" rel="noopener noreferrer">Télécharger le tableau (PDF)</a>
+          <a class="btn" href="assets/Tableau de synthèse.pdf" target="_blank" rel="noopener noreferrer">Télécharger le tableau (PDF)</a>
         </div>
       </div>
     </section>
@@ -510,7 +656,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <span>© 2025 - Portfolio BTS SIO SLAM Benjamin SAM</span>
+      <span>© 2026 - Portfolio BTS SIO SLAM Benjamin SAM</span>
       <nav>
         <a href="index.html">Accueil</a>
         <a href="contact.html">Contact</a>
